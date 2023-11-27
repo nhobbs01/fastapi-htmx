@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}" />
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Counter test</h1>
+      <h5>This is using a template</h5>
+      {%include 'counter-text.html'%}
+      <button hx-get="increment" hx-target="#counter-p" hx-swap="outerHTML">
+        Increment counter
+      </button>
+      <button hx-get="decrement" hx-target="#counter-p" hx-swap="outerHTML">
+        Decrement counter
+      </button>
+    </div>
+  </body>
+</html>
